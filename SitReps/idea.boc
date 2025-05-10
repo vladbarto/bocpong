@@ -1,0 +1,73 @@
+Ziua 1, 10 mai 2025, 23:19
+
+Ziua marii idei. Imi propun sa fac un joc simplu, dar interesant. Simplu de inteles la inceput, dar care
+sa ma lase sa creez. Sa adaug idei, sa fiu nebun. Sa ma joc, sa fac farse, sa fiu imprevizibil.
+Eu si orice alt jucator.
+
+Here goes the idea:
+- un joc de Pong clasic
+- in LAN
+- arhitectura Host
+    - unul dintre clienti devine server si player at the same time (idee inspirata de CS 1.6, in LAN)
+- pong in 2 = simplu, dreptunghi, clasic
+- pong in >2
+   - in 3 => se formeaza triunghi
+   - in 4 => patrat
+   - in 5 => pentagon
+   - in 6 => hexagon
+   - possible future work: sa creezi aliante on the fly
+- ideea: cel cu cele mai multe puncte castiga. Game ends: ceva ca la CS, matematic, best out of 30 rounds
+- to spice things up a bit:
+    - inainte de joc fiecare player isi poate pune capcane in the field. I se genereaza random o
+    capcana pe care o poate folosi
+    - in timpul jocului, superpowers (ca la fifa cu mistery box)
+    - in timpul jocului, un player isi poate trimite o singura data un aid pe teren sa puna o bomba secreta
+    (ca in minesweeper)
+
+Technical things:
+- Java
+- ceva sa randez imagini, nu in terminal. Poate swing? poate JavaGL?
+- clearly 2d
+- artstyle in house
+- audio effects
+- sockets. tcp pentru conexiune, udp pentru updates
+- bufferarea datelor si client data prediciton
+- pachetul java.nio pt buffers si non-blocking i/o
+
+END
+
+UPDATE - 23:37
+Dupa o discutie cu Claude legat de partea grafica:
+Based on your description, I'd recommend libGDX or JavaFX:
+
+2. JavaFX
+Pros:
+- Modern UI toolkit with better performance than Swing
+- Built-in animation frameworks
+- CSS styling for visual elements
+- Better threading model for smoother gameplay
+- Scene graph for easier object management
+
+Cons:
+- Slightly higher learning curve than Swing
+- May be overkill for a simple Pong game
+
+4. libGDX
+Pros:
+- Purpose-built for game development
+- Cross-platform
+- Hardware acceleration
+- Built-in physics, audio, and input handling
+- Streamlined asset management
+- Great community support
+
+Cons:
+- External dependency
+- Might be more than you need for a simple Pong game
+
+If you're prioritizing learning networking concepts with a clean, functional UI: Use JavaFX.
+    It's modern, included in Java, and provides good performance with relatively
+    simple implementation.
+If you want to build something that feels more like a polished game: Use libGDX. It handles
+    game-specific needs like sprite rendering, animation, physics, and sound effects with
+    better performance
