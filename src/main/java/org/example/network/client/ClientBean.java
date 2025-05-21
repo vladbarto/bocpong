@@ -1,4 +1,6 @@
-package org.example.network;
+package org.example.network.client;
+
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -7,7 +9,8 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class Client {
+@Slf4j
+public class ClientBean {
 
     private Socket socket;
     private DataOutputStream out = null;
@@ -15,11 +18,11 @@ public class Client {
     private BufferedReader c = null;
     String line = null;
 
-    public Client(String host, int port) {
+    public ClientBean(String host, int port) {
         try {
-            System.out.println("Client pornit");
-            this.socket = new Socket("192.168.1.131", 1555);//new Socket(host, port);
-            System.out.println("Socket info " + socket);
+            log.info("Client pornit");
+            this.socket = new Socket(host, port);
+            log.info("Socket info: {}", socket);
 
             this.in = new BufferedReader(
                     new InputStreamReader(

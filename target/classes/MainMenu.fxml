@@ -99,16 +99,14 @@
                      <children>
                         <ButtonBar layoutX="105.0" layoutY="69.0" prefHeight="40.0" prefWidth="200.0">
                            <buttons>
-                              <ButtonBar prefHeight="40.0" prefWidth="200.0">
-                                <buttons>
-                                  <Button mnemonicParsing="false" onAction="#getPort" text="See open servers" />
-                                </buttons>
-                              </ButtonBar>
+                              <ButtonBar prefHeight="40.0" prefWidth="200.0" />
                            </buttons>
                         </ButtonBar>
-                      <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" onAction="#getAddress" text="Create a server" />
-                        <TextField fx:id="port" layoutX="320.0" layoutY="14.0" prefHeight="26.0" prefWidth="106.0" promptText="Port" />
-                     </children></AnchorPane>
+                      <Button layoutX="5.0" layoutY="7.0" mnemonicParsing="false" onAction="#createServer" text="Create a server" />
+                        <TextField fx:id="port" layoutX="152.0" layoutY="7.0" prefHeight="26.0" prefWidth="106.0" promptText="Port" />
+                      <Button layoutX="5.0" layoutY="43.0" mnemonicParsing="false" text="See open servers" />
+                     </children>
+                  </AnchorPane>
                 </header>
                 <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />

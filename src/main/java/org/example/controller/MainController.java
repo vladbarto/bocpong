@@ -2,20 +2,26 @@ package org.example.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-
-import java.net.*;
+import org.example.network.client.ClientBean;
+import org.example.network.server.ServerBean;
 
 public class MainController {
 
     @FXML
     private TextField port;
+    private TextField host;
+    private TextField clientPort;
 
-    public void getAddress() throws UnknownHostException {
-        System.out.println(Inet4Address.getLocalHost().getHostAddress());
+    public void createServer() {
+        int numericPort = Integer.parseInt(port.getText());
+        ServerBean server = new ServerBean(numericPort);
+        server.listen();
     }
 
-    public void getPort() throws NullPointerException {
-
-        System.out.println(port.getText());
+    public void connectToServer() {
+        int numericPort = Integer.parseInt(clientPort.getText());
+        String hostname = host.getText();
+        ClientBean client = new ClientBean(hostname, numericPort);
+        client.talk();
     }
 }

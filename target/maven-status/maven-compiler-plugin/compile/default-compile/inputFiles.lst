@@ -1,2 +1,6 @@
-/Users/vladbarto/Documents/PERSONAL_PROJECTS/BocPong/src/main/java/org/example/Main.java
-/Users/vladbarto/Documents/PERSONAL_PROJECTS/BocPong/src/main/java/org/example/MainLauncher.java
+/Users/vladbarto/Documents/PERSONAL_PROJECTS/bocpong/src/main/java/org/example/MainLauncher.java
+/Users/vladbarto/Documents/PERSONAL_PROJECTS/bocpong/src/main/java/org/example/controller/MainController.java
+/Users/vladbarto/Documents/PERSONAL_PROJECTS/bocpong/src/main/java/org/example/network/ServerWorker.java
+/Users/vladbarto/Documents/PERSONAL_PROJECTS/bocpong/src/main/java/org/example/network/Client.java
+/Users/vladbarto/Documents/PERSONAL_PROJECTS/bocpong/src/main/java/org/example/Main.java
+/Users/vladbarto/Documents/PERSONAL_PROJECTS/bocpong/src/main/java/org/example/network/Server.java
