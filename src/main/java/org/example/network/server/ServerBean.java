@@ -12,9 +12,10 @@ public class ServerBean implements Server {
     private ServerSocket serverSocket = null;
     private boolean listening;
     private String hostAddress;
+    private int port;
 
     public ServerBean(int port) {
-        log.info("Creating a server on host and port {} and start listening", port);
+        log.info("Creating a server on given host and port and start listening");
         init(port);
         this.listening = true;
     }
@@ -22,7 +23,9 @@ public class ServerBean implements Server {
     private void init(int port) {
         try {
             serverSocket = new ServerSocket(port);
+            this.port = port;
             this.hostAddress = Inet4Address.getLocalHost().getHostAddress();
+            log.info("Server data: \n\tHost: {}\n\tPort: {}", this.hostAddress, this.port);
         } catch (UnknownHostException e) {
             log.error("Host unknown; {}", e.getMessage());
             System.exit(1);

@@ -104,7 +104,9 @@
                         </ButtonBar>
                       <Button layoutX="5.0" layoutY="7.0" mnemonicParsing="false" onAction="#createServer" text="Create a server" />
                         <TextField fx:id="port" layoutX="152.0" layoutY="7.0" prefHeight="26.0" prefWidth="106.0" promptText="Port" />
-                      <Button layoutX="5.0" layoutY="43.0" mnemonicParsing="false" text="See open servers" />
+                      <Button layoutX="5.0" layoutY="43.0" mnemonicParsing="false" text="Connect to server" />
+                        <TextField fx:id="port1" layoutX="152.0" layoutY="43.0" prefHeight="26.0" prefWidth="106.0" promptText="Host" />
+                        <TextField fx:id="port11" layoutX="279.0" layoutY="43.0" prefHeight="26.0" prefWidth="106.0" promptText="Port" />
                      </children>
                   </AnchorPane>
                 </header>
