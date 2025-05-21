@@ -9,7 +9,11 @@ public class MainController {
 
     @FXML
     private TextField port;
+
+    @FXML
     private TextField host;
+
+    @FXML
     private TextField clientPort;
 
     public void createServer() {
